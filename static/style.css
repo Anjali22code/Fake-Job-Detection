@@ -1,0 +1,230 @@
+body {
+
+    font-family: Arial, sans-serif;
+    background: #f1f5f9;
+    margin: 0;
+    padding: 0;
+
+}
+
+
+/* Navbar */
+
+nav {
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #1e3a8a;
+    padding: 10px 50px;
+
+}
+
+
+.logo {
+
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+}
+
+
+.logo img {
+
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    object-fit: cover;
+
+}
+
+
+.logo span {
+
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+
+}
+
+
+.menu {
+
+    display: flex;
+    gap: 30px;
+
+}
+
+
+.menu a {
+
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+
+}
+
+
+.menu a:hover {
+
+    text-decoration: underline;
+
+}
+
+
+
+/* Main Container */
+
+.container {
+
+    width: 60%;
+    margin: 40px auto;
+    text-align: center;
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0px 0px 15px rgba(0,0,0,0.1);
+
+}
+
+
+h1 {
+
+    color: #1e3a8a;
+
+}
+
+
+
+textarea {
+
+    width: 90%;
+    padding: 15px;
+    font-size: 16px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    resize: none;
+
+}
+
+
+
+/* Buttons */
+
+button {
+
+    background: #2563eb;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    margin: 10px;
+
+}
+
+
+button:hover {
+
+    background: #1d4ed8;
+
+}
+
+
+
+.samples button {
+
+    background: #64748b;
+
+}
+
+
+.samples button:hover {
+
+    background: #475569;
+
+}
+
+
+
+/* Prediction Result */
+
+.result {
+
+    margin-top: 25px;
+    padding: 20px;
+    border-radius: 15px;
+    font-size: 18px;
+
+}
+
+
+.fake {
+
+    background: #ffe5e5;
+    color: red;
+    border: 2px solid red;
+
+}
+
+
+.legit {
+
+    background: #e5ffe5;
+    color: green;
+    border: 2px solid green;
+
+}
+
+
+
+/* About Section */
+
+.info {
+
+    width: 60%;
+    margin: 30px auto;
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0px 0px 15px rgba(0,0,0,0.1);
+
+}
+
+
+.info h2 {
+
+    color: #1e3a8a;
+
+}
+
+
+.info h3 {
+
+    color: #2563eb;
+
+}
+
+
+.info p {
+
+    color: #333;
+    font-size: 16px;
+
+}
+
+
+
+/* Footer */
+
+footer {
+
+    background: #1e3a8a;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 40px;
+
+}

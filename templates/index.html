@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Fake Job Detection</title>
+
+    <link rel="stylesheet" href="/static/style.css">
+
+</head>
+
+
+<body>
+
+
+<nav>
+
+    <div class="logo">
+
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5SjvR-Vk1GOp93pv3uS7QJoMa-OY6aLWpaU00ZYwnzw&s=10" alt="Logo">
+
+        <span>Fake Job Detector</span>
+
+    </div>
+
+
+    <div class="menu">
+
+        <a href="/">Home</a>
+        <a href="#about">About</a>
+
+    </div>
+
+</nav>
+
+
+
+<div class="container">
+
+    <h1>Fake Job Posting Detection</h1>
+
+
+    <form action="/predict" method="POST">
+
+        <textarea 
+            name="job_description"
+            rows="10"
+            placeholder="Enter Job Description here..."
+        ></textarea>
+
+
+        <div class="samples">
+
+            <button type="button" onclick="fakeJob()">
+                Try Fake Job
+            </button>
+
+
+            <button type="button" onclick="legitJob()">
+                Try Legit Job
+            </button>
+
+        </div>
+
+
+        <br>
+
+
+        <button type="submit">
+            Predict
+        </button>
+
+
+    </form>
+
+
+
+    {% if prediction %}
+
+    <div class="result {{status}}">
+
+        <h2>{{ prediction }}</h2>
+
+        <p>
+            Fake Probability: {{ probability }}%
+        </p>
+
+    </div>
+
+    {% endif %}
+
+
+
+</div>
+
+
+
+
+<div class="info" id="about">
+
+    <h2>About This Project</h2>
+
+
+    <p>
+        This system uses Machine Learning to detect whether a job posting
+        is fake or legitimate by analyzing job description text.
+    </p>
+
+
+
+    <h3>Machine Learning Model</h3>
+
+    <p>
+        Algorithm: Random Forest Classifier
+    </p>
+
+
+
+    <h3>Text Processing Technique</h3>
+
+    <p>
+        TF-IDF Vectorization
+    </p>
+
+
+
+    <h3>Dataset</h3>
+
+    <p>
+        Kaggle Fake Job Posting Dataset
+    </p>
+
+
+</div>
+
+
+
+
+<footer>
+
+    <p>
+        © 2026 Fake Job Detection | Machine Learning Project
+    </p>
+
+</footer>
+
+
+
+
+<script>
+
+function fakeJob(){
+
+    document.querySelector("textarea").value =
+    "Earn thousands of dollars from home. No experience required. Pay registration fee and get instant job opportunity.";
+
+}
+
+
+
+function legitJob(){
+
+    document.querySelector("textarea").value =
+    "We are hiring a software engineer. Candidate should have programming skills and experience in Python, Java and web development. Competitive salary and benefits provided.";
+
+}
+
+</script>
+
+
+</body>
+
+</html>
